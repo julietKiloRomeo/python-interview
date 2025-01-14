@@ -33,6 +33,10 @@ uv run pytest
 - Test manually using: curl http://localhost:5000/api/stream-story
 - Discuss scalability considerations
 
+### Fix the Dockerfile
+- Review the provided Dockerfile
+- Build the image
+
 ### Finish up
  - commit your changes with a descriptive message
 
@@ -43,3 +47,4 @@ uv run pytest
 - What security considerations should we think about?
 - How would you document this API?
 - How would you monitor streaming connections in production?
+- How would Docker fit in to this?
