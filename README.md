@@ -13,7 +13,12 @@ uv run flask --app app.py run --debug
 uv run pytest
 ```
 
+
 ## Tasks
+
+### Create your branch
+ - create a branch to work on with your name as the branch name
+
 
 ### Implement Login Authentication
 
@@ -27,6 +32,9 @@ uv run pytest
 - Complete the /api/stream-story endpoint
 - Test manually using: curl http://localhost:5000/api/stream-story
 - Discuss scalability considerations
+
+### Finish up
+ - commit your changes with a descriptive message
 
 
 ## Questions
