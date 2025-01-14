@@ -1,0 +1,14 @@
+[project]
+name = "python-interview"
+version = "0.1.0"
+description = "for interviews"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.1.0",
+    "pytest>=8.3.4",
+]
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = "tests"
