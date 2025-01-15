@@ -29,6 +29,11 @@ def login():
     Returns:
         JSON: {"success": bool, "message": str}
     """
+    for user in users:
+        print(user)
+        if request.json["username"] == user["username"] and request.json["password"] == user["password"]:
+            return {"success": True, "message": "👍"}, 200
+    
     return {"success": False, "message": "Not implemented"}, 401
 
 @app.route('/api/stream-story')
