@@ -16,7 +16,7 @@ def test_login_endpoint():
    """
    client = app.test_client()
    response = client.post('/api/login', 
-       json={"username": "user", "password": "pass"})
+       json={"username": "user", "password": "password"})
    assert response.status_code == 200
 
 
