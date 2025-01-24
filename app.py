@@ -21,18 +21,18 @@ def login():
     
     Expected request body: {"username": "user", "password": "pass"}
     
-    Tasks:
-    1. Get username and password from request
-    2. Check if user exists and password matches
-    3. Return appropriate success/error response with status code
-    
     Returns:
         JSON: {"success": bool, "message": str}
     """
-    for user in users:
-        print(user)
-        if request.json["username"] == user["username"] and request.json["password"] == user["password"]:
-            return {"success": True, "message": "👍"}, 200
+    def user_ok(user):
+        if request.json["username"] != user["username"]:
+            return False
+        if request.json["password"] != user["password"]:
+            return False
+        return True
+
+    if any(filter(user_ok, users)):
+        return {"success": True, "message": "👍"}, 200
     
     return {"success": False, "message": "Not implemented"}, 401
 
@@ -40,13 +40,12 @@ def login():
 def stream_story():
     """Stream a story line by line with delays
     
-    Tasks:
-    1. Create a generator function that yields story chunks
-    2. Add 1-second delay between chunks
-    3. Return streaming response with text/plain mime type
-    4. (Bonus) Handle client disconnection gracefully
-    
     Returns:
         Response: Streaming response with story chunks
     """
-    return
+    def generator(chunks):
+        for chunk in chunks:
+            time.sleep(0.1)
+            yield chunk
+
+    yield from generator(STORY_CHUNKS)

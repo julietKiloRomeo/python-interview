@@ -7,9 +7,8 @@ WORKDIR /app
 # Copy application code
 COPY . .
 
-# TODO: What's missing here?
-# Hint: Think about uv and pyproject.toml!
-
+RUN pip install uv
+RUN uv sync
 # Expose port
 EXPOSE 5000
 
