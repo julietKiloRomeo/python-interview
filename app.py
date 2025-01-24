@@ -1,6 +1,10 @@
 from flask import Flask, request, Response
 import time
 
+# pretend to read an env file
+with open(".env", "r") as f:
+    pass
+
 # Mock database - in production this would be a proper database
 users = [{"username": "user", "password": "password"}]
 
