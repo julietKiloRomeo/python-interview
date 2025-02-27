@@ -13,6 +13,8 @@ uv run flask --app app.py run --debug
 ```
 
 ## Running the tests
+
+(this will fail by the way)
 ```bash
 uv run pytest
 ```
