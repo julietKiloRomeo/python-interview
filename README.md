@@ -2,11 +2,15 @@
 
 Welcome! This is a small Flask application with two main tasks to work on during our 20-minute pair programming session.
 
+## Set up
+```bash
+pip install uv
+```
+
 ## Starting the app
 ```bash
 uv run flask --app app.py run --debug
 ```
-
 
 ## Running the tests
 ```bash
