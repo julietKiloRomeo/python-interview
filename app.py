@@ -33,16 +33,6 @@ def login():
     Returns:
         JSON: {"success": bool, "message": str}
     """
-    def user_ok(user):
-        if request.json["username"] != user["username"]:
-            return False
-        if request.json["password"] != user["password"]:
-            return False
-        return True
-
-    if any(filter(user_ok, users)):
-        return {"success": True, "message": "👍"}, 200
-    
     return {"success": False, "message": "Not implemented"}, 401
 
 @app.route('/api/stream-story')
@@ -52,9 +42,4 @@ def stream_story():
     Returns:
         Response: Streaming response with story chunks
     """
-    def generator(chunks):
-        for chunk in chunks:
-            time.sleep(0.1)
-            yield chunk
-
-    yield from generator(STORY_CHUNKS)
+    ...
