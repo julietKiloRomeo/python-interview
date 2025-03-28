@@ -1,7 +1,5 @@
 # Python Flask Interview Exercise
 
-Welcome! This is a small Flask application with two main tasks to work on during our 20-minute pair programming session.
-
 ## Set up
 ```bash
 pip install uv

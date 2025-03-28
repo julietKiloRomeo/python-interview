@@ -5,13 +5,12 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Copy application code
-COPY . .
+COPY app.py app.py
+COPY pyproject.toml pyproject.toml
 
-# TODO: What's missing here?
-# Hint: Think about uv and pyproject.toml!
-
-# Expose port
-EXPOSE 5000
+# install requirements
+RUN pip install uv
+RUN uv sync
 
 # Run the application using uv
 CMD ["uv", "run", "flask", "run", "--host=0.0.0.0"]
