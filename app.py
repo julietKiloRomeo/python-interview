@@ -19,6 +19,11 @@ STORY_CHUNKS = [
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def hello():
+    return "Hello"
+
+
 @app.route('/api/login', methods=['POST'])
 def login():
     """Authenticate user login
