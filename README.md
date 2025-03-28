@@ -1,4 +1,7 @@
 # Python Flask Interview Exercise
+**Welcome** to this technical interview. We will step through the exercises together - slowly.
+
+The point is to collaborate and communicate your line of thought. It is perfectly OK to ask questions. Just like if you got this task at work.
 
 ## Set up
 ```bash
